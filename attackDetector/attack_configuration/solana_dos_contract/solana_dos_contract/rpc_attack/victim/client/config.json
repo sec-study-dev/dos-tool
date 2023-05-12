@@ -1,0 +1,10 @@
+{
+		"victimId":"62JcZPEBMQGPvJMALb1vSZ3u293PhouogQDfooipCW7j",
+		"helloWorldId":"Fn4ZfhqBHEnz8KG35J3rSeVbLVnr3tgFqr8ZUCjghM6q",
+		"normalUrl":"http://192.168.3.250:8899",
+		"syncUrl":"http://192.168.1.162:8899",
+		"mesureInternal":60000,
+	    "mesureCount":10,
+		"interval":20,
+		"sentCount":30000
+}
