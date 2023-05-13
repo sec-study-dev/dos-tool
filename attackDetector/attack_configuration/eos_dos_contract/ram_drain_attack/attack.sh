@@ -38,10 +38,10 @@ do
 		for k in $(seq 1 $n3)
 		do
 			account="ram.att$i$j$k"
-			account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.2.91:8889/v1/chain/get_account)
+			account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.1.146:8889/v1/chain/get_account)
 			cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 			if [ "$cpu_used" = "" ];then
-				account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.2.91:8889/v1/chain/get_account)
+				account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.1.146:8889/v1/chain/get_account)
 				cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 			fi
 			if [ "$cpu_used" = "" ];then
@@ -62,10 +62,10 @@ do
 	done
 done
 
-account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.2.91:8889/v1/chain/get_account)
+account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.1.146:8889/v1/chain/get_account)
 cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 if [ "$cpu_used" = "" ];then
-	account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.2.91:8889/v1/chain/get_account)
+	account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.1.146:8889/v1/chain/get_account)
 	cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 fi
 cpu_used=$(echo "$cpu_used" | grep -Eo "[0-9]+")
@@ -104,7 +104,7 @@ do
 		do
 		{
 			account="ram.att$i$j$k"
-			cleos -u http://192.168.2.91:8889 push action ram.victim ramconsume '["'$account'",'$2']' -p $account@active 
+			cleos -u http://192.168.1.146:8889 push action ram.victim ramconsume '["'$account'",'$2']' -p $account@active 
 		}&
 		done
 	done
@@ -127,10 +127,10 @@ do
 		for k in $(seq 1 $n3)
 		do
 			account="ram.att$i$j$k"
-			account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.2.91:8889/v1/chain/get_account)
+			account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.1.146:8889/v1/chain/get_account)
             cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 			if [ "$cpu_used" = "" ];then
-				account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.2.91:8889/v1/chain/get_account)
+				account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"'$account'"}' http://192.168.1.146:8889/v1/chain/get_account)
 				cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 			fi
 			if [ "$cpu_used" = "" ];then
@@ -152,10 +152,10 @@ do
 	done
 done
 
-account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.2.91:8889/v1/chain/get_account)
+account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.1.146:8889/v1/chain/get_account)
 cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 if [ "$cpu_used" = "" ];then
-	account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.2.91:8889/v1/chain/get_account)
+	account_info=$(curl -H "Content-Type: application/json" -X POST -d '{"account_name":"ram.victim"}' http://192.168.1.146:8889/v1/chain/get_account)
 	cpu_used=$(echo "$account_info" | grep -Eo "\"cpu_limit\":\\{\"used\":[0-9]+,")
 fi
 cpu_used=$(echo "$cpu_used" | grep -Eo "[0-9]+")

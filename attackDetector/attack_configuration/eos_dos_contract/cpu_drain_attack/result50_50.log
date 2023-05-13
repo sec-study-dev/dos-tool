@@ -1,7 +1,7 @@
-attacker cpu used: 32362 us
-attacker net used: 34850 byte
+attacker cpu used: 93133 us
+attacker net used: 33271 byte
 attacker ram used: 0 byte
-victim cpu used: 58428 us
-victim net used: -10 byte
+victim cpu used: 59330 us
+victim net used: -9 byte
 victim ram used: 0 byte
 time used: 27 s
