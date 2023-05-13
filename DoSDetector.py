@@ -13,8 +13,8 @@ if __name__ == "__main__":
 	print("*" * 50)
 	blockchain = input("Please input blockchain type: ")
 
-	#model_validation(blockchain)
-	#run(blockchain)
+	model_validation(blockchain)
+	run(blockchain)
 
-	#construct_contract(blockchain, prerequisites_dict["v_scp"], prerequisites_dict["v_free"], prerequisites_dict["v_under"], prerequisites_dict["v_rpc"], "None")
+	construct_contract(blockchain, prerequisites_dict["v_scp"], prerequisites_dict["v_free"], prerequisites_dict["v_under"], prerequisites_dict["v_rpc"], "None")
 	simulate(blockchain)
