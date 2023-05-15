@@ -2,8 +2,12 @@
 
 
 ## Requirements
+## Requirements
 
 ### Required Packages
+
+* **python**3
+* **jq**
 
 For the blockchain to be tested, you need to configure its required environment according to the official requirements
 
