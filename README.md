@@ -9,12 +9,14 @@
 * **python**3
 * **jq**
 * **paramiko**
+* **cryptography**36.0.2
 
 Run the following script to install the required packages.
 
 ```
 pip install --upgrade pip
 pip install paramiko
+pip install cryptography==36.0.2
 ```
 
 For the blockchain to be tested, you need to configure its required environment according to the official requirements
