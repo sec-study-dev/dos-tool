@@ -8,6 +8,14 @@
 
 * **python**3
 * **jq**
+* **paramiko**
+
+Run the following script to install the required packages.
+
+```
+pip install --upgrade pip
+pip install paramiko
+```
 
 For the blockchain to be tested, you need to configure its required environment according to the official requirements
 
