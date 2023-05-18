@@ -12,7 +12,7 @@ def model_validation(blockchain):
 if __name__ == "__main__":
 
 	print("*" * 50)
-	blockchain = input("Please input blockchain type (eos, ethereum, rsk, wax, telos, klaytn, tron, bos): ")
+	blockchain = input("Please input blockchain type (eos, ethereum, rsk, wax, solana, telos, klaytn, tron, bos): ")
 
 	model_validation(blockchain)
 	run(blockchain)

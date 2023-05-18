@@ -282,6 +282,34 @@ def build_chain(blockchain):
 
 		time.sleep(5)
 
+	if blockchain == "solana":
+		cwd = os.getcwd()
+		install_path = os.path.join(cwd, "attackDetector", "attack_configuration", "solana_script", "victim_node", "install_system.sh")
+		os.chdir(os.path.dirname(install_path))
+
+		replace_ip("../solana_script")
+
+		try:
+			os.system("./install_system.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./start.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./second.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
 
 def attack(blockchain):
 	if blockchain == "eos":
@@ -658,6 +686,55 @@ def end(blockchain):
 
 		try:
 			os.system("./unistall_eosio.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+	if blockchain == "solana":
+		cwd = os.getcwd()
+		att_path = os.path.join(cwd, "..", "attack_node", "rpc_attack", "src", "build.sh")
+		os.chdir(os.path.dirname(att_path))
+
+		try:
+			os.system("./build.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		cwd = os.getcwd()
+		att_path = os.path.join(cwd, "..", "client", "install_system.sh")
+		os.chdir(os.path.dirname(att_path))
+
+		try:
+			os.system("./install_system.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./deoloy.sh")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./attack.sh 30 1400")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./attack.sh 50 1400")
+		except Exception as e:
+			print("An error occurred: ", e)
+
+		time.sleep(5)
+
+		try:
+			os.system("./attack.sh 100 1400")
 		except Exception as e:
 			print("An error occurred: ", e)
 
