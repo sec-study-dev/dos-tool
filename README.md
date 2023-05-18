@@ -34,3 +34,5 @@ pip install cryptography==36.0.2
 
 * Enter the type of blockchain you want to detect. The synchronization process will take 48 hours as it is necessary to synchronize a sufficient number of blocks to get accurate information when detecting under priced weaknesses in ethereum, tron, rsk, klaytn.
 
+* The results of the experiment will be logged in the corresponding blockchain folder in the attackDetector/attack_configuration path in the resultXX.log after the execution is completed.
+
