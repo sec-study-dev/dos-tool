@@ -7,6 +7,7 @@
 ### Required Packages
 
 * **python**3
+* **Oracle JDK**1.8
 * **jq**
 * **paramiko**
 * **cryptography**36.0.2
@@ -22,6 +23,8 @@ pip install cryptography==36.0.2
 For the blockchain to be tested, you need to configure its required environment according to the official requirements
 
 ## Running Our Tool
+
+* In order to use the info collector normally, please first fill in your OpenAI API Key in the fourth line of dos-tool/infoCollect/chatgpt.py
 
 * Go to the dos-tool folder and use this command: . /DoSDetector.py
 
