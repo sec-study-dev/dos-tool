@@ -1,7 +1,7 @@
 import openai
 
 # Please fill in your key
-openai.api_key = "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"
+openai.api_key = "sk-"
 
 # Interacting with chatgpt
 def chat_gpt(prompt):
