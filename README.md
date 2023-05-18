@@ -8,6 +8,9 @@
 
 * **python**3
 * **Oracle JDK**1.8
+* **rust**
+* **nodejs**
+* **npm**
 * **jq**
 * **paramiko**
 * **cryptography**36.0.2
@@ -15,12 +18,13 @@
 Run the following script to install the required packages.
 
 ```
+sudo apt update
+sudo apt install nodejs npm
+sudo apt install jq
 pip install --upgrade pip
 pip install paramiko
 pip install cryptography==36.0.2
 ```
-
-For the blockchain to be tested, you need to configure its required environment according to the official requirements
 
 ## Running Our Tool
 
