@@ -2,7 +2,6 @@
 
 
 ## Requirements
-## Requirements
 
 ### Required Packages
 
